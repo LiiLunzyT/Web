@@ -1,0 +1,31 @@
+﻿@{
+    var path = Server.MapPath("/banner.txt");
+    var fileImage = System.IO.File.ReadAllText(path);
+    ViewBag.image = "/Images/" + fileImage;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/styleAdmin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="banner"><img src=@ViewBag.image></div>
+
+    <div class="menu">
+        @Html.ActionLink("TRANG CHỦ", "", "Home")
+        @Html.ActionLink("ĐĂNG KÝ", "", "Register")
+        @Html.ActionLink("GỬI EMAIL", "", "Email")
+        @Html.ActionLink("THAY ĐỔI BANNER", "ChangeBanner")
+    </div>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        Copyright &copy; @DateTime.Now.Year
+    </div>
+</body>
+</html>

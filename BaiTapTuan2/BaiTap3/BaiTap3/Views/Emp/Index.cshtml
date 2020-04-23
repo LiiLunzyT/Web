@@ -1,0 +1,39 @@
+﻿@model BaiTap3.Models.EmpModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Emp", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h3>THÔNG TIN THÀNH VIÊN ĐĂNG KÝ</h3>
+    <div class="form-c">
+        <label>Mã số nhân viên: </label>
+        @Html.TextBoxFor(model => model.EmpID, new { @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Họ tên: </label>
+        @Html.TextBoxFor(model => model.Name, new { @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Ngày sinh: </label>
+        @Html.TextBoxFor(model => model.BirthOfDate, new { @type = "date", @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Email: </label>
+        @Html.TextBoxFor(model => model.Email, new { @type = "email", @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Mật khẩu: </label>
+        @Html.TextBoxFor(model => model.Password, new { @type = "password", @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Đơn vị: </label>
+        @Html.TextBoxFor(model => model.Department, new { @required = "required" })
+    </div>
+    <div class="form-c">
+        <label>Ảnh đại diện: </label>
+        @Html.TextBoxFor(model => model.Avatar, new { @type="file", @required = "required" })
+    </div>
+    <button type="submit">Đăng ký</button>
+}
+

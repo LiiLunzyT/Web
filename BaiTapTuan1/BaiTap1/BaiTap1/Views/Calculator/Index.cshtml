@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="calculator-container">
+    <form name="f1" action="/Calculator/Index" method="post">
+        <h3>THỰC HIỆN PHÉP TOÁN CƠ BẢN</h3>
+        <div class="form-c">
+            <lable for="a">Nhập a: </lable>
+            <input type="text" name="a" required />
+        </div>
+        <div class="form-c">
+            <lable for="b">Nhập b: </lable>
+            <input type="text" name="b" required />
+        </div>
+        <div class="form-c">
+            <input type="radio" checked name="pt" value="+" /><label>Cộng</label>
+            <input type="radio" name="pt" value="-" /><label>Trừ</label>
+            <input type="radio" name="pt" value="*" /><label>Nhân</label>
+            <input type="radio" name="pt" value="/" /><label>Chia</label>
+        </div>
+        <div class="form-c">
+            <button type="submit">Tính toán</button>
+        </div>
+        <div class="form-c">Kết quả: <input type="text" name="kq" value=@ViewBag.KQ /></div>
+    </form>
+</div>
+
+@model BaiTap1.Models.Calculatorcs
+<div class="calculator-container">
+    @using (Html.BeginForm())
+    {
+        <div>a= @Html.EditorFor(model => model.a) </div>
+        <div>b= @Html.EditorFor(model => model.b) </div>
+        <div>
+            Cộng @Html.RadioButtonFor(model => model.pt, "+", new { @checked = "checked" }) &nbsp;
+            Trừ @Html.RadioButtonFor(model => model.pt, "-") &nbsp;
+            Nhân @Html.RadioButtonFor(model => model.pt, "*") &nbsp;
+            Chia @Html.RadioButtonFor(model => model.pt, "/") &nbsp;
+        </div>
+        <div><input type="submit" value="Tính toán" /></div>
+        <div>Kết quả: <input type="text" name="kq" value=@ViewBag.KQ /></div>
+    }
+</div>

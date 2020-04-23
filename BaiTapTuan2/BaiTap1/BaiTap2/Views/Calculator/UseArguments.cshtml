@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<form name="f" action="/Calculator/UseArguments" method="post">
+    <h3>THỰC HIỆN PHÉP TOÁN CƠ BẢN</h3>
+    <div class="form-c">
+        <label for="a">Nhập a: </label>
+        <input type="text" name="a" required />
+    </div>
+    <div class="form-c">
+        <label for="b">Nhập b: </label>
+        <input type="text" name="b" required />
+    </div>
+    <div class="form-c">
+        <input type="radio" name="pt" value="+" checked /><label>Cộng</label>
+        <input type="radio" name="pt" value="-" /><label>Trừ</label>
+        <input type="radio" name="pt" value="*" /><label>Nhân</label>
+        <input type="radio" name="pt" value="/" /><label>Chia</label>
+        <button type="submit">Tính toán</button>
+    </div>
+    <div class="form-c">
+        <label for="kq">Kết quả: </label>
+        <input type="text" name="KQ" readonly value=@ViewBag.KQ />
+    </div>
+</form>
+

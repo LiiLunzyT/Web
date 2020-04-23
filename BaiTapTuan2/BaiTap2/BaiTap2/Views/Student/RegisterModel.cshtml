@@ -1,0 +1,24 @@
+﻿@model BaiTap2.Models.StudentModel
+
+@{
+    ViewBag.Title = "RegisterRequest";
+}
+
+@using (Html.BeginForm())
+{
+    <h3>THÔNG TIN SINH VIÊN</h3>
+    <div class="form-c">
+        <label for="Id">Mã sinh viên: </label>
+        @Html.TextBoxFor(model => model.Id, new { @required = "required" })
+    </div>
+    <div class="form-c">
+        <label for="Name">Họ và tên: </label>
+        @Html.TextBoxFor(model => model.Name, new { @required = "required" })
+    </div>
+    <div class="form-c">
+        <label for="Mark">Điểm: </label>
+        @Html.TextBoxFor(model => model.Mark, new { @required = "required" })
+    </div>
+    <button type="submit">Đăng ký</button>
+}
+

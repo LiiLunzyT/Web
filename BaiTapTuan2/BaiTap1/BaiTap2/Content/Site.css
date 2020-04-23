@@ -1,0 +1,44 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 100px;
+    border: 1px solid black;
+    width: 500px;
+    padding: 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-c {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+label, input[type="radio"] {
+    margin: 0;
+}
+
+button {
+    width: 30%;
+    padding: 5px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 5px;
+}

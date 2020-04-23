@@ -1,0 +1,41 @@
+﻿@model BaiTap5.Models.EmpModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>THÔNG TIN THÀNH VIÊN ĐĂNG KÝ</h2>
+
+@using (Html.BeginForm("Confirm", "Register", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpID)
+        @Html.TextBoxFor(model => model.EmpID, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpName)
+        @Html.TextBoxFor(model => model.EmpName, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpDoB)
+        @Html.TextBoxFor(model => model.EmpDoB, "{0:dd/MM/yyyy}", new { @type = "date", @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpEmail)
+        @Html.TextBoxFor(model => model.EmpEmail, new { @type = "email", @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpPassword)
+        @Html.TextBoxFor(model => model.EmpPassword, new { @type = "password", @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpDepartment)
+        @Html.TextBoxFor(model => model.EmpDepartment, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.EmpAvatar)
+        @Html.TextBoxFor(model => model.EmpAvatar, new { @type = "file", @required = "required" })
+    </div>
+    <input type="submit" value="Đăng ký">
+}

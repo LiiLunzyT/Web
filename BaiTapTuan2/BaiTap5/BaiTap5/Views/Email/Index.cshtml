@@ -1,0 +1,35 @@
+﻿@model BaiTap5.Models.EmailModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>CHỨC NĂNG GỬI EMAIL</h2>
+
+@using (Html.BeginForm("SendMail", "Email", FormMethod.Post))
+{
+    <div class="result">@ViewBag.Result</div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.From)
+        @Html.TextBoxFor(model => model.From, new { @type = "email", @required = "required"})
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.Password)
+        @Html.TextBoxFor(model => model.Password, new { @type = "password", @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.To)
+        @Html.TextBoxFor(model => model.To, new { @type = "email", @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.Subject)
+        @Html.TextBoxFor(model => model.Subject, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(model => model.Body)
+        @Html.TextAreaFor(model => model.Body, new { @required = "required" , @rows="5"})
+    </div>
+    <input type="submit" value="Đăng ký">
+}
+

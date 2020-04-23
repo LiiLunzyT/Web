@@ -1,0 +1,154 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top :0px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+.menu a { 
+    display: block;
+    padding: 15px;
+    border-left: 1px solid black;
+    text-decoration: none;
+    color: darkblue;
+}
+.menu a:first-child {
+    margin-left: 50px;
+    border-left: none;
+}
+.menu a:hover {
+    color: white;
+    background-color: darkblue;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.content ul {
+    list-style-type: decimal;
+    text-align: left;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+form {
+    padding: 20px 10px 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    max-width: 500px;
+}
+
+.form-g {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 65%;
+    padding: 5px;
+    border-radius: 3px;
+}
+input[type="submit"] {
+    width: 40%;
+    margin: 0 auto;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.card {
+    height: 300px;
+    margin: 10px auto;
+    position: relative;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+.card-container {
+    margin-top: 30px;
+    margin-left: 80px;
+    font-size: 21px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.item-title {
+    width: 30%;
+    font-weight: bold;
+}
+
+.btn-back {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.btn-back a {
+    text-decoration: none;
+}
+
+.result {
+    margin-bottom: 10px;
+    color: green;
+}
