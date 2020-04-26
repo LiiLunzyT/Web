@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link href="~/Content/styleAdmin.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/styleAdmin.css" runat="server" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="banner"><img src=@ViewBag.image></div>
@@ -18,7 +18,7 @@
         @Html.ActionLink("TRANG CHỦ", "", "Home")
         @Html.ActionLink("ĐĂNG KÝ", "", "Register")
         @Html.ActionLink("GỬI EMAIL", "", "Email")
-        @Html.ActionLink("THAY ĐỔI BANNER", "ChangeBanner")
+        @Html.ActionLink("THAY ĐỔI BANNER", "", "Banner")
     </div>
 
     <div class="content">

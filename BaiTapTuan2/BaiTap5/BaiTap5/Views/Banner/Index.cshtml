@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>THAY ĐỔI BANNER</h2>
+
+@using (Html.BeginForm("ChangeBanner", "Banner", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-g">
+        <label for="banner">Chọn ảnh làm banner</label>
+        <input type="file" required name="banner"/>
+    </div>
+    <input type="submit" value="Thay đổi"/>
+}
+
