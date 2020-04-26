@@ -1,0 +1,33 @@
+﻿@model BaiTap4.Models.MailModel
+
+@{
+    ViewBag.Title = "Mail";
+}
+
+<h2>CHỨC NĂNG GỬI EMAIL</h2>
+
+@using (Html.BeginForm("SendMail", "Mail", FormMethod.Post))
+{
+    <div class="form-g">
+        @Html.LabelFor(m => m.From)
+        @Html.TextBoxFor(m => m.From, new { @required="required"})
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(m => m.To)
+        @Html.TextBoxFor(m => m.To, new { @required = "required" })
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(m => m.Subject)
+        @Html.TextBoxFor(m => m.Subject, new {})
+    </div>
+    <div class="form-g">
+        @Html.LabelFor(m => m.Body)
+        @Html.TextAreaFor(m => m.Body, new { @rows="5", @required = "required" })
+    </div>
+    <input type="submit" value="Gửi email" />
+}
+

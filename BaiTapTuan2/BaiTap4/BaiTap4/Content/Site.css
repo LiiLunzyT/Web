@@ -1,0 +1,48 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+h2 {
+    margin-top: 100px;
+}
+
+form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 10px;
+    border: 1px solid black;
+}
+
+.form-g {
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+}
+
+input, textarea {
+    width: 70%;
+    padding: 5px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    width: 200px;
+}
